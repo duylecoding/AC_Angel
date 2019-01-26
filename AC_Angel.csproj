@@ -21,7 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\app\shared\" />
+    <None Remove="ClientApp\app\shared\filter.ts" />
+    <None Remove="ClientApp\app\shared\home.ts" />
+    <None Remove="ClientApp\app\shared\tenant.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\shared\filter.ts" />
+    <TypeScriptCompile Include="ClientApp\app\shared\home.ts" />
+    <TypeScriptCompile Include="ClientApp\app\shared\tenant.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
